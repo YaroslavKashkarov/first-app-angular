@@ -7,14 +7,13 @@
 }
 
 .listing-heading {
-  font-size: 48px;
+  font-size: 38px;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
 .listing-heading:first-child {
   color: var(--primary-color);
-  cursor: pointer;
 
 }
 
