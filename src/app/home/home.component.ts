@@ -20,7 +20,8 @@ import {HousingService} from '../housing.service';
     </section>
     <section class="results">
       <app-housing-location *ngFor="let housingLocation of filteredLocationList"
-                            [housingLocation]="housingLocation"></app-housing-location>
+                            [housingLocation]="housingLocation">
+      </app-housing-location>
     </section>
   `,
   styleUrl: './home.component.css',
@@ -32,7 +33,7 @@ export class HomeComponent {
   housingLocationList: HousingLocation[] = [];
   housingService: HousingService = inject(HousingService);
 
-  constructor() {
+  constructor () {
     this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]): void => {
       this.housingLocationList = housingLocationList;
       this.filteredLocationList = housingLocationList;

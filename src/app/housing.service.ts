@@ -5,7 +5,7 @@ import {HousingLocation} from './housing-location';
   providedIn: 'root',
 })
 export class HousingService {
-  url = 'http://localhost:3000/locations';
+  url: string = 'http://localhost:3000/locations';
 
   constructor() {
   }
@@ -20,7 +20,7 @@ export class HousingService {
     return await data.json() ?? '';
   }
 
-  submitApplication(firstName: string, lastName: string, email: string) {
+  submitApplication(firstName: string, lastName: string, email: string): void {
     console.log(`Homes application received: firstName:${firstName}, lastName:${lastName}, email: ${email}`);
   }
 }
